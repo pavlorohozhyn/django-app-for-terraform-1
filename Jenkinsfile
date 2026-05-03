@@ -20,8 +20,8 @@ spec:
     }
 
    environment {
-        ECR_REPO = "211125349493.dkr.ecr.us-east-1.amazonaws.com/dev-lesson-8-9-test"
-        GITOPS_REPO = "github.com/PavloRohozhyn/django-app-for-terraform.git"
+        ECR_REPO = "211125349493.dkr.ecr.us-east-1.amazonaws.com/dev-lesson-db-module-test"
+        GITOPS_REPO = "github.com/PavloRohozhyn/django-app-for-terraform-1.git"
         IMAGE_TAG = "${env.BUILD_NUMBER}"
     }
 
