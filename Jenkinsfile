@@ -48,15 +48,15 @@ spec:
                             sh """
                                 git config --global user.email "jenkins@example.com"
                                 git config --global user.name "Jenkins CI"
-                                git clone -b lesson-8-9 https://\$GH_TOKEN@github.com/PavloRohozhyn/terraform.git temp_infra
+                                git clone -b lesson-db-module https://\$GH_TOKEN@github.com/PavloRohozhyn/terraform.git temp_infra
                                 cd temp_infra
-                                FILE_PATH="lesson-8-9/charts/django-app/values.yaml"
+                                FILE_PATH="lesson-db-module/charts/django-app/values.yaml"
                                 if [ -f "\$FILE_PATH" ]; then
                                     echo "Update tag to : ${IMAGE_TAG}"
                                     sed -i "s/tag: .*/tag: \\"${IMAGE_TAG}\\"/" "\$FILE_PATH"
                                     git add "\$FILE_PATH"
                                     git commit -m "Update Django image to ${IMAGE_TAG} (Build #${BUILD_NUMBER}) [skip ci]"
-                                    git push origin lesson-8-9
+                                    git push origin lesson-db-module
                                 else
                                     echo "error: file \$FILE_PATH not found"
                                     find . -maxdepth 3 -not -path '*/.*'
