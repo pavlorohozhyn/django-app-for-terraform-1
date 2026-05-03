@@ -4,7 +4,7 @@ services:
     container_name: database
     restart: always
     environment:
-      - POSTGRES_DB=todo-db
+      - POSTGRES_DB=tododb
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=admin123
     volumes:
