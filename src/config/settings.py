@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'todo-db',
         'USER': 'postgres',
         'PASSWORD': 'admin123',
-        'HOST': 'todo-db.cade8u6u81yb.us-east-1.rds.amazonaws.com'
+        'HOST': 'todo-db.cade8u6u81yb.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
